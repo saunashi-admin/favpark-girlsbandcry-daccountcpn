@@ -1,0 +1,24 @@
+//- 本番と開発でパスを変更
+- var assetsPath = (['prod'].includes(process.env.NODE_ENV) ) ? "./assets/" : "/assets/";
+- var linkPath = (['prod'].includes(process.env.NODE_ENV) ) ? "./" : "/";
+- var urlPath = (['prod'].includes(process.env.NODE_ENV) ) ? "https://ssw.web.docomo.ne.jp/favpark/girlsbandcry-exhibition" : "/";
+- var imgPath = assetsPath+'img/'
+- var corporate_name = 'GIRLS BAND CRY EXHIBITION｜Favpark'
+- var title_separator = ' | '
+- var timestamp = '20250309'
+
+-
+	var pages = {
+		top:{
+			url: 'https://ssw.web.docomo.ne.jp/favpark/girlsbandcry-exhibition/',
+			title: `${corporate_name}`,
+			description: '2025年4月9日(水)から4月20日(日)の12日間、東京池袋・サンシャインシティにおいて、「ガールズバンドクライ展」の開催が決定！TVアニメ『ガールズバンドクライ』のキャラクター、ストーリーの魅⼒に迫るほか、貴重な設定資料や、キャラクターデザイン・⼿島nari描き下ろしキービジュアルのドローイング映像を展⽰。さらに、作中のあのシーンを再現できるようなフォトスポットも!?',
+		},
+		request_:{
+			url: '/',
+			title: `${corporate_name}`,
+			description: '2025年4月9日(水)から4月20日(日)の12日間、東京池袋・サンシャインシティにおいて、「ガールズバンドクライ展」の開催が決定！TVアニメ『ガールズバンドクライ』のキャラクター、ストーリーの魅⼒に迫るほか、貴重な設定資料や、キャラクターデザイン・⼿島nari描き下ろしキービジュアルのドローイング映像を展⽰。さらに、作中のあのシーンを再現できるようなフォトスポットも!?',
+		},
+
+	}
+

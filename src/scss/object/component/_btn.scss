@@ -1,0 +1,118 @@
+@use '../../variables' as var;
+@use '../../modules' as mod;
+.c-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	width: 100%;
+	max-width: mod.pxtovw(280, 375);
+	height: 56px;
+	position: relative;
+	margin: 0 auto;
+	@include mod.mq('lg'){
+		max-width: 360px;
+		height: 80px;
+	}
+	&:before{
+		background: var.$color_text;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: all 0.25s ease;
+		transition-property: transform;
+		width: 100%;
+		height: 100%;
+	}
+	&:hover{
+		&:before{
+			transform: scaleX(1);
+			transform-origin: left;
+		}
+		.c-btn__text{
+			color: var.$color_bg_01 !important;
+		}
+		&.-primary,
+		&.-secondary,
+		&.-tertiary{
+			.c-btn__icon{
+				&.-arrow{
+					@include var.arrowIcon(var.$color_bg_01, 14px, 14px);
+				}
+			}
+		}
+	}
+	&.-primary{
+		background: var.$color_primary;
+		.c-btn__text{
+			color: var.$color_bg_01;
+		}
+		.c-btn__icon{
+			&.-arrow{
+				@include var.arrowIcon(var.$color_bg_01, 14px, 14px);
+			}
+		}
+	}
+	&.-secondary{
+		background: var.$color_bg_01;
+		border: 2px solid var.$color_text;
+		&:before{
+			background: var.$color_primary;
+		}
+		.c-btn__text{
+			color: var.$color_text;
+		}
+		.c-btn__icon{
+			&.-arrow{
+				@include var.arrowIcon(var.$color_text, 14px, 14px);
+			}
+		}
+	}
+	&.-tertiary{
+		background: #CCCCCC;
+		&:before{
+			background: var.$color_primary;
+		}
+		.c-btn__text{
+			color: var.$color_text;
+		}
+		.c-btn__icon{
+			&.-arrow{
+				@include var.arrowIcon(var.$color_text, 14px, 14px);
+			}
+		}
+	}
+	&.-disabled{
+		background: var.$color_disabled;
+		pointer-events: none;
+	}
+	&__text{
+		position: relative;
+		z-index: 1;
+		transition: all 0.25s ease;
+		font-size: 16px;
+		@include mod.mq('lg'){
+			font-size: 18px;
+		}
+		small{
+			display: block;
+			font-size: 10px;
+			letter-spacing: 0.05em;
+			text-align: center;
+		}
+	}
+	&__icon{
+		display: block;
+		position: relative;
+		z-index: 1;
+		transition: all 0.25s ease;
+		&.-arrow{
+			&.-external{
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}

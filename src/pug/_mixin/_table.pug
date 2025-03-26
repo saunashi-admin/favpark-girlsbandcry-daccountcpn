@@ -1,0 +1,15 @@
+//- table
+
+mixin c-table(theadDataList, tbodyDataList)
+	- count = 0;
+	table.c-table&attributes(attributes)
+		thead.c-table__thead
+			tr
+				each item in theadDataList
+					th !{item['text']}
+		tbody.c-table__tbody
+			each row in tbodyDataList
+				tr
+					each column in row
+						td !{column}
+					- count += 1;

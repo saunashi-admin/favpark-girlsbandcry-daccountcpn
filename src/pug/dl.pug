@@ -1,0 +1,625 @@
+extends ./_layout/_home.pug
+block vars
+	include ./_config/_config.pug
+	- var key = 'top'
+	- var page = pages[key]
+	- var bodyClass = 'p-home'
+
+block contents
+	.p-home__kv
+		.p-homeKv__img
+			+sourceImg('kv_01', 'png', '', 'simple', 'home/', '375', '401')
+		section.p-homeKv__detail
+			h1.p-homeKv__heading
+				img(src=imgPath+'home/text_kv-01.svg', alt='ガールズバンドクライ展', width='344', height='46', fetchpriority='high').p-homeKv__headingImg
+			.p-homeKv__schedule
+				p.p-homeKv__scheduleDate
+					img(src=imgPath+'home/text_kv-02.svg', alt='2025.4.9(水)〜4.20(日)', width='289', height='23', fetchpriority='high').p-homeKv__scheduleDateImg
+				p.p-homeKv__schedulePlace
+					img(src=imgPath+'home/text_kv-03.svg', alt='池袋・サンシャインシティ', width='323', height='22', fetchpriority='high').p-homeKv__schedulePlaceImg
+			.p-homeKv__more
+				a.c-btn.-secondary(href='#ticket')
+					span.c-btn__text
+						| チケット情報はこちら
+					span.c-btn__icon.-arrow
+		.p-homeKv__path
+		.p-homeKv__bg
+
+	section.p-home__about#about(data-scroll='content')
+		h2.p-homeAbout__heading
+			img(src=imgPath+'home/text_about.svg', alt='ガールズバンドクライ展').p-homeAbout__headingImg
+		.l-container.-xl
+			p.p-homeAbout__lead.js-justify
+				i.-en
+					| 2024
+				| 年
+				i.-en
+					| 4
+				| 月から
+				i.-en
+					| 6
+				| 月にかけて、全1
+				i.-en
+					| 3
+				| 話にわたり放送された
+				br.c-br.-pc
+				| 東映アニメーションの完全オリジナルアニメ『ガールズバンドクライ』。
+				br.c-br.-pc
+				| アニメ放映から
+				i.-en
+					| 1
+				| 年となる
+				i.-en
+					| 2025
+				| 年春、
+				br.c-br.-pc
+				| TVアニメ『ガールズバンドクライ』の展示会が開催！
+			p.p-homeAbout__paragraph
+				| TVアニメ『ガールズバンドクライ』のキャラクター、ストーリーの魅力に迫るほか、貴重な設定資料や、
+				br.c-br.-pc
+				| キャラクターデザイン・手島nari描き下ろしキービジュアルのドローイング映像を展示。
+				br.c-br.-pc
+				| さらに、作中のあのシーンを再現できるようなフォトスポットも!?
+			p.p-homeAbout__text
+				| 2025年3月9日(日)10:00より
+				br.c-br
+				| 3Dステッカー付きチケット・前売券
+				br.c-br.-sp
+				| 販売開始
+
+	section.p-home__event#event
+		h3.p-homeEvent__heading(data-scroll)
+			img(src=imgPath+'home/text_event.svg', alt='開催概要', width='280', height='136', loading='lazy', fetchpriority='low').p-homeEvent__headingImg
+		.l-container.-lg(data-scroll='content')
+			.p-homeEvent__detail
+				dl.p-homeEvent__detailList
+					.p-homeEvent__detailItem
+						dt.p-homeEvent__detailTitle
+							| イベント名
+						dd.p-homeEvent__detailContent
+							p.p-homeEvent__detailParagraph
+								| ガールズバンドクライ展
+					.p-homeEvent__detailItem
+						dt.p-homeEvent__detailTitle
+							| 開催期間
+						dd.p-homeEvent__detailContent
+							p.p-homeEvent__detailParagraph
+								| 2025年4月9日(水)~4月20日(日)
+								br.c-br.-sp
+								| 合計12日間
+							p.p-homeEvent__detailParagraph.-notice
+								| 4月9日(水)、12日(土)、13日(日)、
+								br.c-br.-sp
+								| 19日(土)、20(日)は日時指定制
+					.p-homeEvent__detailItem
+						dt.p-homeEvent__detailTitle
+							| 開催時間
+						dd.p-homeEvent__detailContent
+							p.p-homeEvent__detailParagraph
+								| 11:00~19:00(最終入場18:00)
+							p.p-homeEvent__detailParagraph.-notice
+								| 最終日 4月20日は17:00閉場
+								br.c-br.-sp
+								| （最終入場16:00）
+					.p-homeEvent__detailItem
+						dt.p-homeEvent__detailTitle
+							| 開催場所
+						dd.p-homeEvent__detailContent
+							p.p-homeEvent__detailParagraph
+								| 池袋・サンシャインシティ　
+								br
+								| ワールドインポートマートビル4F　
+								br.c-br.-sp
+								| 展示ホールA
+							p.p-homeEvent__detailParagraph.-notice
+								| （東京都豊島区東池袋3-1-1）
+					.p-homeEvent__detailItem
+						dt.p-homeEvent__detailTitle
+							| 主催
+						dd.p-homeEvent__detailContent
+							p.p-homeEvent__detailParagraph
+								| 「ガールズバンドクライ展」東京実行委員会
+					.p-homeEvent__detailItem
+						dt.p-homeEvent__detailTitle
+							| 関連サイト
+						dd.p-homeEvent__detailContent
+							p.p-homeEvent__detailParagraph
+								| 『ガールズバンドクライ展』公式HP：
+								br.c-br.-pc
+								a.c-link(href='https://www.toei-anim.co.jp/lp/girls-band-cry/', target='_blank')
+									| https://www.toei-anim.co.jp/lp/girls-band-cry/
+								br
+								| 『ガールズバンドクライ展』公式X：
+								br.c-br.-pc
+								a.c-link(href='https://x.com/girlsbandcry_ex', target='_blank')
+									| https://x.com/girlsbandcry_ex
+								br
+								| 『ガールズバンドクライ展』ハッシュタグ：
+								br.c-br.-pc
+								span.c-link(href='#todo', target='_blank')
+									| ＃ガルクラ展
+					.p-homeEvent__detailItem
+						dt.p-homeEvent__detailTitle
+							| お問い合わせ先
+						dd.p-homeEvent__detailContent
+							p.p-homeEvent__detailParagraph
+								| 03-5318-0633（平日10:00～17:00）
+				img(src=imgPath+'home/img_event.jpg', alt='イベント', width='311', height='333', loading='lazy', fetchpriority='low').p-homeEvent__img
+			.l-container
+				.l-accordion.p-homeEvent__notice
+					.l-accordion__heading.js-accordionTitle
+						h4.l-accordion__headingText
+							| イベントに関する注意事項
+						span.l-accordion__icon
+					.l-accordion__content.js-accordionContent
+						p.l-accordionContent__paragraph.-heading
+							| 会場に関する注意事項
+						ul.l-accordionContent__list
+							li.l-accordionContent__item
+								| 再入場はできません。
+							li.l-accordionContent__item
+								| 会場内にお手洗いはございません。
+							li.l-accordionContent__item
+								| 一部、日時指定がございます。日程については販売ページにてご確認ください。
+							li.l-accordionContent__item
+								| イベント日時、内容などは諸般の事情により予告なく変更、延期、中止となる場合もございます。
+							li.l-accordionContent__item
+								| 駐車場割引、団体割引、シニア割引など、各種割引制度は実施しておりません。
+							li.l-accordionContent__item
+								| 障がい者手帳(ミライロID含む)をお持ちの方で介助者が同伴される場合、介助者1名は無料となります。ご本人様はチケットをご購入いただき、受付にて障がい者手帳と合わせてご提示ください。
+							li.l-accordionContent__item
+								| 会場が混雑した際には、お客様の安全確保のため、入場規制を行う場合がございます。
+							li.l-accordionContent__item
+								| 混雑の際は予告なく、整理券の配布や、開催時間の変更などの対応をさせていただく場合がございます。
+							li.l-accordionContent__item
+								| 車椅子でもご入場いただけますが、一部ご鑑賞・ご体験しづらい場合がございます。予めご確認の上、チケットをお買い求めください。
+							li.l-accordionContent__item
+								| 会場内では主催による記録撮影、各種メディアによる取材撮影（テレビ・新聞・雑誌・インターネット等）を行う場合がございます。広告物・掲載物などに使用される可能性、動画などに来場者が映り込み掲載される可能性がありますのでご了承ください。
+							li.l-accordionContent__item
+								| 以下の場合にはお早めにお近くのスタッフまでお申し出ください。
+								br
+								| 気分が悪くなったり、怪我をしてしまった場合
+								br
+								| 落とし物を拾った場合、または落とし物をしてしまった場合
+								br
+								| 迷子になったり、迷子を見つけた場合（会場内でのお呼び出しはできません）
+							li.l-accordionContent__item
+								| 危険ですので会場内外は走らないでください。
+							li.l-accordionContent__item
+								| 通路などの共有スペースでの座り込みなど、他のお客様のご迷惑になるような行為はご遠慮ください。
+							li.l-accordionContent__item
+								| 会場内は禁煙です。喫煙所はアルパ3階杵屋近くにございます。
+							li.l-accordionContent__item
+								| 雨天の場合でも、屋外に並んでいただく場合もございますので、予め雨具をご用意ください。
+							li.l-accordionContent__item
+								| ケガやトラブルの原因となりますので、キャリーバッグ等大きな手荷物は展示会場内にはお持ち込み出来ません。近隣や会場施設内のコインロッカー(https://sunshinecity.jp/information/guide.html)をご利用ください。なお、施設内のコインロッカーは数に限りがございます。
+							li.l-accordionContent__item
+								| 会場に更衣室、クローク等のご用意はございません。また、会場施設内および近隣施設のトイレ等での着替えは禁止しております。
+							li.l-accordionContent__item
+								| ペットを連れてのご入場はできません（盲導犬、介助犬は除く）。
+							li.l-accordionContent__item
+								| お祝い花（スタンド花、アレンジメント共に）を辞退しております。また、プレゼント及びお手紙のお預かりは全てお断りさせていただきます。皆さまのご理解とご協力をお願いいたします。
+							li.l-accordionContent__item
+								| 徹夜を含む、前日からの展示会場および近隣へのご来場は固くお断りいたします。
+							li.l-accordionContent__item
+								| すべての展示物には触れないでください。
+							li.l-accordionContent__item
+								| 展示会場内での飲食はできません。（水分補給を除く）
+							li.l-accordionContent__item
+								| 荷物・貴重品の管理はご自身で行ってください。主催者は一切の責任を負いません。
+							li.l-accordionContent__item
+								| 基本的な持ち込み禁止物は、下記をご参照ください。
+								br
+								| 禁止物のお持ち込みが確認された場合は、該当の物品をお預かりさせていただきます。お預かりした禁止物は当日中に引き取りに来ていただくようお願いいたします。なお、スタッフの指示に従っていただけない場合は、ご入場をお断りさせていただく場合がございます。
+								br
+								| ＜持ち込み禁止物＞
+								br
+								| ①刀剣類、銃器類（模造剣含む）
+								br
+								| ②刃物類（はさみ、カミソリ、カッター、ナイフ 等）
+								br
+								| ③毒物・薬物・その他有害物質
+								br
+								| ④火器類、発煙筒、爆竹、花火、爆発物、火薬、照明弾、油類、その他危険物
+								br
+								| ⑤乗ることが出来るもの（自転車、ローラーブレード、ローラースケート、スケートボードなど）
+								br
+								| ⑥ドローン・ラジコン
+								br
+								| ⑦その他主催者が危険と判断する物
+								br
+								| ※持ち込み禁止物は今後内容が予告なく変更・追加される場合がございます。
+							li.l-accordionContent__item
+								| 既製グッズや特殊な衣装など、ご自身でお持ち込みになった物品に関するトラブル等についての責任は負いかねます。ご了承ください。
+							li.l-accordionContent__item
+								| イベントの妨げおよび、他のお客様に危害を及ぼす可能性のある行為は一切禁止いたします。イベントを安全・円滑に運営するため、スタッフの案内に従っていただけますよう、お客様のご協力をお願い申し上げます。
+						p.l-accordionContent__paragraph.-heading
+							| 入場注意事項
+						ul.l-accordionContent__list
+							li.l-accordionContent__item
+								| 日時指定券は記載のある日時のみ有効です。
+							li.l-accordionContent__item
+								| 日時指定券のご入場については、チケット記載の集合時間に会場へお越しください。集合時間より早くお越しいただいてもご入場いただけません。またお待ちいただく際は近隣施設や他の利用者のご迷惑にならないよう、ご配慮をお願いいたします。
+							li.l-accordionContent__item
+								| 会場が混雑した場合、お客様の安全確保の為、日時指定券をお持ちの場合でもやむを得ず入場規制を行うことがございます。また、ご入場に時間がかかる場合がございます。
+							li.l-accordionContent__item
+								| 物販コーナー含めて19時閉場です。（※最終日4月20日(日)のみ17時閉場）
+							li.l-accordionContent__item
+								| 物販コーナーのみのご利用はできません。
+							li.l-accordionContent__item
+								| 入れ替え制ではございません。
+							li.l-accordionContent__item
+								| いかなる場合においてもチケットの再発行はできません。充分にご注意下さい。また、当日にチケットをお忘れになった方も場内にお入り頂けませんので予めご了承ください。
+							li.l-accordionContent__item
+								| お買い上げのチケットには半券が付随しております。入場前に該当会場の半券を切り離してしまうと入場できませんのでご注意ください。
+							li.l-accordionContent__item
+								| 入場特典は入場時に受付にてお渡しいたします。“入場券”と“特典引換券”を合わせてご提示ください。入場券のみの特典引き換え、特典引き換え券のみの特典引き換えはお受けできません。
+							li.l-accordionContent__item
+								| 駐車場割引、団体割引、シニア割引など、各種割引制度は実施しておりません。
+							li.l-accordionContent__item
+								| 障がい者手帳(ミライロID含む)をお持ちの方で介助者が同伴される場合、介助者1名は無料となります。ご本人様はチケットをご購入いただき、受付にて障がい者手帳と合わせてご提示ください。
+							li.l-accordionContent__item
+								| お客様都合による購入後の払戻し、及び日時の変更や券種の変更等はできません。
+							li.l-accordionContent__item
+								| チケットは換金できません。また、盗難・紛失された場合でも再発行いたしませんのでご注意ください。
+							li.l-accordionContent__item
+								| 転売目的でのチケットの購入はお断りさせていただいております。営利目的のチケット転売はご遠慮ください。(転売目的のチケット購入は法令に抵触し、罰せられる場合があります。) また、譲渡、転売のトラブルについて、主催者は一切の責任を負いません。
+						p.l-accordionContent__paragraph.-heading
+							| トークショー注意事項
+						ul.l-accordionContent__list
+							li.l-accordionContent__item
+								| 会場は展示会場と同じく「池袋・サンシャインシティ　ワールドインポートマートビル4F 展示ホールA」で開催いたします。入場口は展示会場と異なりますのでスタッフの指示に従いご入場ください。
+							li.l-accordionContent__item
+								| 入場時は手荷物検査を行います。入場時にお時間を要する場合がございますので、余裕をもってご来場いただきますようお願いいたします。
+							li.l-accordionContent__item
+								| 複数人でお申し込まれた場合も、同行者様と座席が隣同士にならない可能性がございます。予めご了承の上チケットをご購入ください。
+							li.l-accordionContent__item
+								| チケットの転売・譲渡は禁止です。
+							li.l-accordionContent__item
+								| 転売チケットでのご入場はできません。
+							li.l-accordionContent__item
+								| 紛失・盗難等の責任は一切負いかねますので予めご了承下さい。
+							li.l-accordionContent__item
+								| チケットの転売・譲渡行為防止の観点から、ご入場時に本人確認をさせていただく場合がございます。
+							li.l-accordionContent__item
+								| ご来場の際は、顔写真付き公的身分証(運転免許証、パスポート等)を必ずご持参ください。顔写真付き身分証をお持ちでない方は公的身分証を2点(学生証、健康保険証、住⺠票、等)ご持参ください。身分証は必ず原本をご持参ください。全ての身分証においてコピー/写真画像/データ等は認められません。
+							li.l-accordionContent__item
+								| 身分証をご提示いただけない方はご入場をお断りする場合がございます。
+							li.l-accordionContent__item
+								| いかなる場合においてもチケットの再発行はできません。十分にご注意ください。また、当日にチケットをお忘れになった方も場内にお入り頂けませんので予めご了承ください。
+							li.l-accordionContent__item
+								| 主催による記録撮影、各種メディアによる取材撮影（テレビ・新聞・雑誌・インターネット等）を行う場合がございます。広告物・掲載物などに使用される可能性、動画などに来場者が映り込み掲載される可能性がありますのでご了承ください。
+							li.l-accordionContent__item
+								| 天候ほかの諸事情により中止になる場合もあります。またイベント内容が予告なく変更になる場合があります。
+							li.l-accordionContent__item
+								| 出演者変更に伴うチケットの払い戻しはいたしませんので予めご了承ください。
+							li.l-accordionContent__item
+								| トークショー公演中、体調がすぐれない場合は無理をせず、お近くのスタッフにお申し出ください。
+							li.l-accordionContent__item
+								| 当日は他のお客様の迷惑となるような行為はご遠慮ください。また、会場ではスタッフの指示に従ってください。
+							li.l-accordionContent__item
+								| 当日の、会場周辺での座り込みや集会等は、他のお客様のご迷惑となりますので禁止とさせていただきます。
+							li.l-accordionContent__item
+								| 係員の指示に従わず自ら混乱を招き怪我などが生じた場合、主催者・施設および出演者は、一切の責任を負いません。
+							li.l-accordionContent__item
+								| 係員の指示に従っていただけない場合は退場処分とさせていただくこともございます。その際のチケット代金の払い戻しは一切いたしかねます。
+							li.l-accordionContent__item
+								| 上記の注意事項の他にも、会場やイベントその他の状況により演出の妨げや、周りのお客様のご迷惑になると判断した場合は、スタッフからお声がけさせていただきます。その際は指示に従っていただきますようお願いいたします。
+						p.l-accordionContent__paragraph
+							| ご来場いただきましたお客様に安心して公演をご覧いただけますよう、注意事項を必ずお守りください。
+						p.l-accordionContent__paragraph.-heading
+							| 撮影について
+						ul.l-accordionContent__list
+							li.l-accordionContent__item
+								| 会場内での写真及び動画撮影、録音はご遠慮ください。
+							li.l-accordionContent__item
+								| 一部の撮影可能エリアでは、携帯電話、スマートフォン、タブレット端末での写真・動画撮影が可能です。
+							li.l-accordionContent__item
+								| 一眼レフカメラ等、長いもの、大きいものはご使用できません。
+							li.l-accordionContent__item
+								| フラッシュ撮影、自撮り棒、三脚等の撮影補助機材の使用はご遠慮ください。
+							li.l-accordionContent__item
+								| 混雑時に写真撮影をされる方は、鑑賞されている方を優先とし、周囲のお客様にご配慮いただくとともに、スタッフの指示に従ってください。
+							li.l-accordionContent__item
+								| 状況によっては、撮影可能エリアであっても、撮影を制限、ご遠慮いただく場合がございます。
+							li.l-accordionContent__item
+								| 撮影した写真の用途は私的利用に限ります。商用利用は固く禁止いたします。
+							li.l-accordionContent__item
+								| 撮影時は、他のお客様が写らないようにご配慮ください。
+						p.l-accordionContent__paragraph.-heading
+							| チケットに関する諸注意
+						ul.l-accordionContent__list
+							li.l-accordionContent__item
+								| チケットぴあで展示会入場券(日時指定券／期間内有効券)をご購入された方は、イベント会場では発券できませんので、あらかじめコンビニ店舗にて発券し、ご持参ください。ご購入されていても発券されていないお客様はご入場いただけません。
+							li.l-accordionContent__item
+								| トークショー付チケットをご購入いただいた方は、トークショー参加券／展示会入場券(期間内有効券)／オリジナルデザイン記念チケットの3点をご購入時にご登録いただいたご住所宛に配送いたします。登録のお届け先住所不備に起因する配送の遅延や未着等のトラブルについては、一切責任を負いかねます。
+							li.l-accordionContent__item
+								| いかなる場合においても、入場券ご購入後の日時券種変更や払い戻し、再発行などはいたしません。
+							li.l-accordionContent__item
+								| 会場が混雑した場合、お客様の安全確保の為、日時指定券をお持ちの場合でも入場規制を行うことがございます。また、ご入場に時間がかかる場合がございます。ご了承くださいませ。
+							li.l-accordionContent__item
+								| 各回区分で残数チケットがある場合のみ、会場にて当日券を販売いたします。
+							li.l-accordionContent__item
+								| 会場での当日券販売は、混雑状況により販売を中止する場合がございますので、予めご了承ください。また、日時指定日で定員に達した時間帯の販売はございません。当日券の販売については、イベント公式Xで当日朝にご案内します。
+						p.l-accordionContent__paragraph.-heading
+							| 物販注意事項
+						ul.l-accordionContent__list
+							li.l-accordionContent__item
+								| 物販コーナーのご利用には、展示エリアへの入場が必要です。
+							li.l-accordionContent__item
+								| 物販コーナーでのお会計は、お１人様、チケット１枚につき1回のみとなります。チケットは失くさないようにお持ちください。
+							li.l-accordionContent__item
+								| 物販コーナーは展示エリアの最後にございます。物販コーナーからの入場はできませんので展示エリアをご覧いただいた後にご利用ください。（展示・物販コーナー共に再入場はできません）
+							li.l-accordionContent__item
+								| 複数人数分まとめてのお会計はできません。
+							li.l-accordionContent__item
+								| 会場内外、公道および近隣施設でのグッズの交換・譲渡は、近隣施設や施設利用者のご迷惑となりますので、固く禁止させていただきます。
+							li.l-accordionContent__item
+								| 当日の状況により、グッズ購入に長時間お並びいただく場合がございます。
+							li.l-accordionContent__item
+								| 商品の数に限りがございますので、売り切れの際はご容赦ください。また、商品の売り切れによるチケットの払い戻しはいたしません。
+							li.l-accordionContent__item
+								| 商品には販売上限数を設けさせていただいております。また、予告なくお一人様あたりのご購入制限数の変更・販売中止とさせていただく場合がございます。
+							li.l-accordionContent__item
+								| 商品に関するお問い合わせ（在庫数や入荷予定など）につきましては、お答えいたしかねます。予めご了承ください。
+							li.l-accordionContent__item
+								| 一旦完売しました商品が会期中に追加販売となる可能性がございます。入荷状況に関しましては、イベント公式Xをご確認ください。
+							li.l-accordionContent__item
+								| 会期前、会期中を問わず個数制限を変更する場合がございます。
+							li.l-accordionContent__item
+								| トレーディング商品は絵柄をお選びいただいて購入することはできません。また商品の特性上、複数ご購入いただいても同じ絵柄の場合がございます。
+							li.l-accordionContent__item
+								| 商品画像はイメージです。実際の商品の色、デザインとは異なる場合がございます。
+							li.l-accordionContent__item
+								| 商品の仕様は変更になる場合がございます。予めご注意ください。
+							li.l-accordionContent__item
+								| 転売目的での購入は、固くお断り致します。
+							li.l-accordionContent__item
+								| レジ袋は有償となります。
+							li.l-accordionContent__item
+								| お買い求めいただいた商品・サイズ・数量・お釣銭などは、必ずその場でご確認ください。その場を退出された後の会計間違い、追加商品購入や不備は対応致しかねます。
+							li.l-accordionContent__item
+								| 初期不良をのぞき、商品の返品・交換は出来ません。
+							li.l-accordionContent__item
+								| 初期不良品交換の場合は、商品購入時のレシートと現品を確認させていただきます。レシートは大切に保管してください。レシートが無い場合は交換いたしかねます。
+							li.l-accordionContent__item
+								| 状況により、物販コーナーへの入場を制限させていただく場合がございます。
+							li.l-accordionContent__item
+								| 待機列への割り込みは禁止です。同行者が先に並んでいても、必ず最後尾に並んでください。また、待機列から一度抜けて戻った場合は、最後尾からお並びいただきます。
+							li.l-accordionContent__item
+								| 物販コーナーでは、購入制限個数（上限数）を超えた、多数の商品を買い物カゴに入れないでください。（大量の商品を確保して他のお客様へ受け渡す行為は禁止です）
+							li.l-accordionContent__item
+								| 物販コーナーでは、買い物カゴは常に手に持ってお買い物ください。（会計前の商品や、商品の入った買い物カゴを床に置く行為は禁止です）
+							li.l-accordionContent__item
+								| すべてのお客様に公平にご購入いただくために、一部商品はレジで販売いたします。
+							li.l-accordionContent__item
+								| 物販コーナーでは、購入商品の宅配サービスの受け付けは行っておりません。
+							li.l-accordionContent__item
+								| 品切れしている商品の予約受付、取り置き、後日配送は対応しておりません。
+							li.l-accordionContent__item
+								| 会場内でのお客様同士のトラブルや事故、盗難に関して一切の責任を負えません。
+							li.l-accordionContent__item
+								| 物販コーナー内では、大変危険ですので絶対に走らないでください。
+							li.l-accordionContent__item
+								| 物販コーナーではスタッフの指示に従ってください
+						p.l-accordionContent__paragraph
+							| 従っていただけない場合は入場、また物販コーナーの利用をご遠慮いただく場合がございます。
+						p.l-accordionContent__paragraph.-heading
+							| 支払い方法について
+						ul.l-accordionContent__list
+							li.l-accordionContent__item
+								| お支払いは現金の他に、クレジットカード／1回払いのみ（VISA・MasterCard・JCB・American Express・Discover・DinersClub）・交通系マネー・ PayPay、d払い、auPay、WeChatPay、Alipayがご利用いただけます。
+				.l-accordion.p-homeEvent__faq
+					.l-accordion__heading.js-accordionTitle
+						h4.l-accordion__headingText
+							| よくある質問
+						span.l-accordion__icon
+					.l-accordion__content.js-accordionContent
+						p.l-accordionContent__paragraph.-heading
+							| チケットについて
+						ul.l-accordionContent__list
+							li.l-accordionContent__item.-question
+								| チケットに割引はありますか？
+							li.l-accordionContent__item.-answer
+								|  駐車場割引、団体割引、シニア割引など、各種割引制度は実施しておりません。
+								br
+								| 障がい者手帳(ミライロID含む)をお持ちの方で介助者が同伴される場合、介助者1名は無料となります。ご本人様はチケットをご購入いただき、受付にて障がい者手帳と合わせてご提示ください。
+							li.l-accordionContent__item.-question
+								| 入場券を紛失したので再発行してほしい。
+							li.l-accordionContent__item.-answer
+								| 再発行はできません。
+							li.l-accordionContent__item.-question
+								| 入場券の払い戻しはできますか？
+							li.l-accordionContent__item.-answer
+								| 一度入金、発券したチケットの払い戻しや取消はできません。
+							li.l-accordionContent__item.-question
+								| 当日券の販売はありますか？
+							li.l-accordionContent__item.-answer
+								| 会場内の当日券受付またはプレイガイドにてお買い求めください。ただし、日時指定日は完売している場合があります。
+								br
+								| 当日券の販売状況は、イベント公式Xをご確認ください。
+							li.l-accordionContent__item.-question
+								| 前売券の販売は何時までですか？
+							li.l-accordionContent__item.-answer
+								| 2025年4月8日(火)23:59まで販売いたします。
+							li.l-accordionContent__item.-question
+								| グッズ付き入場券のグッズはどこで引き換えられますか？
+							li.l-accordionContent__item.-answer
+								| 入場時、受付でお渡しいたします。入場券と特典引き換え券の両方を受付にてお見せください。入場券のみの特典引き換え、特典引き換え券のみの特典引き換えはお受けできません。
+							li.l-accordionContent__item.-question
+								| 入場をせずにチケット特典のみ引き換えは可能でしょうか？
+							li.l-accordionContent__item.-answer
+								p
+									| チケット特典のみの引き換えはできかねます。
+									br
+									| 特典の引き換えは入場時に行います、特典引き換え券を忘れずお持ちください。
+									br
+									| お客様の都合によりご来場できなかった場合、グッズの引き換え権利は失効します。個別発送対応はできません。
+						p.l-accordionContent__paragraph.-heading
+							| 会場について
+						ul.l-accordionContent__list
+							li.l-accordionContent__item.-question
+								| 会場はどこで開催しますか？
+							li.l-accordionContent__item.-answer
+								p
+									| 池袋・サンシャインシティ　ワールドインポートマートビル4F　展示ホールA
+									br
+									| （東京都豊島区東池袋3-1-3）です。
+									br
+									| 会場までのアクセスはこちらからご確認ください
+									br
+									a.c-link(href='https://sunshinecity.jp/facility/exhibition.html', target='_blank')
+										| https://sunshinecity.jp/facility/exhibition.html
+							li.l-accordionContent__item.-question
+								| 再入場はできますか？
+							li.l-accordionContent__item.-answer
+								| 会場への再入場はできません。
+							li.l-accordionContent__item.-question
+								| 駐車場サービスはありますか？
+							li.l-accordionContent__item.-answer
+								| ありません。公共交通機関の利用等にご協力ください。
+							li.l-accordionContent__item.-question
+								| ペットを連れて入場できますか？
+							li.l-accordionContent__item.-answer
+								| ペットを連れての入場はできません。ただし、盲導犬・介助犬・聴導犬を連れての入場は可能です。
+							li.l-accordionContent__item.-question
+								| ベビーカーでの入場は出来ますか？
+							li.l-accordionContent__item.-answer
+								| ベビーカーでの入場はご遠慮ください。
+							li.l-accordionContent__item.-question
+								| 子ども（小学生以下）は何名まで無料入場できますか？
+							li.l-accordionContent__item.-answer
+								| 大人1名につき、2名まで無料で入場いただけます。
+							li.l-accordionContent__item.-question
+								| 子どもだけで入場できますか？
+							li.l-accordionContent__item.-answer
+								| 安全のため、小学生以下のお子様は必ず保護者同伴（中学生以上）でご入場ください。
+							li.l-accordionContent__item.-question
+								| 車椅子で入場できますか？
+							li.l-accordionContent__item.-answer
+								| ご入場いただけます。ただし、混雑状況によっては展示物等が見えにくい場合がございます。ご了承ください。
+							li.l-accordionContent__item.-question
+								| 会場内の写真・動画撮影は可能ですか？
+							li.l-accordionContent__item.-answer
+								| 会場内は一部展示物の写真・動画撮影が可能です。ただし、自撮り棒、三脚等のご使用やフラッシュ撮影、録音はご遠慮ください。
+							li.l-accordionContent__item.-question
+								| 音声ガイドはありますか？
+							li.l-accordionContent__item.-answer
+								| 音声ガイドはございません。
+							li.l-accordionContent__item.-question
+								| 会場にお祝い花の送付やプレゼントのお渡しはできますか？
+							li.l-accordionContent__item.-answer
+								| お祝い花（スタンド花、アレンジメント共に）を辞退しております。また、プレゼント及びお手紙のお預かりは全てお断りさせていただきます。皆さまのご理解とご協力をお願いいたします。
+							li.l-accordionContent__item.-question
+								| 持ち込み不可能なものを教えてください。
+							li.l-accordionContent__item.-answer
+								p
+									| 基本的な持ち込み禁止物は、下記をご参照ください。
+									br
+									| また、ケガやトラブルの原因となりますので、キャリーバッグ等大きな手荷物は展示会場内にはお持ち込みできません。近隣や会場施設内のコインロッカー(https://sunshinecity.jp/information/guide.html)をご利用ください。なお、施設内のコインロッカーは数に限りがございます。
+									br
+									| 禁止物のお持ち込みが確認された場合は、該当の物品をお預かりさせていただきます。お預かりした禁止物は当日中にお引き取りに来ていただくようお願いいたします。なお、スタッフの指示に従っていただけない場合は、ご入場をお断りさせていただく場合がございます。
+									br
+									| ＜持ち込み禁止物＞
+									br
+									| ①刀剣類、銃器類（模造剣含む）
+									br
+									| ②刃物類（はさみ、カミソリ、カッター、ナイフ 等）
+									br
+									| ③毒物・薬物・その他有害物質
+									br
+									| ④火器類、発煙筒、爆竹、花火、爆発物、火薬、照明弾、油類、その他危険物
+									br
+									| ⑤乗ることが出来るもの（自転車、ローラーブレード、ローラースケート、スケートボードなど）
+									br
+									| ⑥ドローン・ラジコン
+									br
+									| ⑦その他主催者が危険と判断する物
+									br
+									| ※持ち込み禁止物は今後内容が予告なく変更・追加される場合がございます。
+							li.l-accordionContent__item.-question
+								| グッズはどのようなものがありますか？
+							li.l-accordionContent__item.-answer
+								| グッズに関しましては、グッズページにてお知らせいたします。
+							li.l-accordionContent__item.-question
+								| 事後通販、通信販売の予定はありますか？
+							li.l-accordionContent__item.-answer
+								| 事後通販、通信販売の予定は未定です。
+							li.l-accordionContent__item.-question
+								| グッズ販売のみの利用はできますか？
+							li.l-accordionContent__item.-answer
+								| グッズ販売のみのご利用はできません。物販コーナーのご利用には、展示エリアへの入場が必要です。物販コーナーでのお会計は、お１人様、チケット１枚につき1回のみとなります。チケットは失くさないようにお持ちください。
+		.l-bg.p-homeEvent__bg
+
+	section.p-home__ticket#ticket
+		h3.p-homeTicket__heading(data-scroll)
+			img(src=imgPath+'home/text_ticket.svg', alt='チケット情報', width='302', height='132', loading='lazy', fetchpriority='low').p-homeTicket__headingImg
+		.l-container(data-scroll='content')
+			section.p-homeTicket__detail.-general
+				h4.p-homeTicket__subHeading
+					| 一般チケット概要
+				include ./_include/_ticket/_general-3d.pug
+				include ./_include/_ticket/_general.pug
+				//- .l-accordion.p-homeTicket__notice
+				//- 	.l-accordion__heading.js-accordionTitle
+				//- 		h5.l-accordion__headingText
+				//- 			| チケットに関する注意事項
+				//- 		span.l-accordion__icon
+				//- 	.l-accordion__content.js-accordionContent
+						//- TODO: 中身確認
+			section.p-homeTicket__detail.-advance
+				h4.p-homeTicket__subHeading
+					| 特別先行受付期間(抽選)概要
+				include ./_include/_ticket/_advance-original.pug
+				include ./_include/_ticket/_advance-talk.pug
+				.p-homeTicket__talkDetail
+					h5.p-homeTicket__talkDetailHeading
+						| トークショー概要
+					.p-homeTicket__talkDetailContent
+						ul.p-homeTicket__talkDetailList
+							li.p-homeTicket__talkDetailItem.-square
+								| 開催日程：4月15日(火)
+								br
+								| 開場18:30〜、開演 19:30〜
+								br
+								| 登壇者：プロデューサー 平山(東映アニメーション所属)、製作スタッフ 予定
+							li.p-homeTicket__talkDetailItem.-square
+								| 開催日：4月16日(水)、17(木)
+								br
+								| 開場18:30～、開演 19:30～
+								br
+								| 登壇者：声優キャスト(井芹仁菜役:理名、河原木桃香役:夕莉、ルパ役: 朱李)予定
+						p.p-homeTicket__talkDetailParagraph
+							| トーク内容詳細は後日解禁予定！お楽しみに♪
+				.p-homeTicket__talkDetail
+					h5.p-homeTicket__talkDetailHeading
+						| 氏名入りオリジナルチケットについて
+					.p-homeTicket__talkDetailContent
+						ul.p-homeTicket__talkDetailList
+							li.p-homeTicket__talkDetailItem
+								| お客様の名前入りオリジナルデザインチケットを配送にてお届けいたします。
+							li.p-homeTicket__talkDetailItem
+								| 複数枚ご購入いただいた場合でも、デザインチケットに印字される氏名は、ご購入者様の氏名となりますので、予めご了承ください。
+							li.p-homeTicket__talkDetailItem
+								| お申込み時にご登録の住所にお送りいたします。登録住所に誤りがあったなどの理由による配送トラブルには一切責任を負いかねます。
+							li.p-homeTicket__talkDetailItem
+								| チケット代金、各種手数料に別途、1件あたり配送料1,100円(税込)がかかります。
+							li.p-homeTicket__talkDetailItem
+								| オリジナルチケットは、トークショーおよび展示会の入場チケットではございませんのでご注意ください。
+							li.p-homeTicket__talkDetailItem
+								| トークショーおよび展示会の入場に必要なチケットは、オリジナルチケットと同封してお送りいたします。
+							li.p-homeTicket__talkDetailItem
+								| オリジナルチケットデザインは、全公演共通デザインとなります。
+				//- .l-accordion.p-homeTicket__notice
+				//- 	.l-accordion__heading.js-accordionTitle
+				//- 		h5.l-accordion__headingText
+				//- 			| チケットに関する注意事項
+				//- 		span.l-accordion__icon
+				//- 	.l-accordion__content.js-accordionContent
+				//- 		//- TODO: 中身確認
+		.l-bg.p-homeTicket__bg
+
+	p.p-home__copyright
+		img(src=imgPath+'home/text_copyright.svg', alt='東映アニメーション', width='120', height='12', loading='lazy', fetchpriority='low').p-homeCopyright__img
+
+

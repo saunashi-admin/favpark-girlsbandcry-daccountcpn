@@ -1,0 +1,10 @@
+@use '../../variables' as var;
+@use '../../modules' as mod;
+.c-link{
+	word-break: break-all;
+	color: var.$color_primary;
+	text-decoration: underline;
+	&.-secondary{
+		color: var.$color_bg_01;
+	}
+}

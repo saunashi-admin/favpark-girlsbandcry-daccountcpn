@@ -1,0 +1,16 @@
+/* ================
+	@include var.fontDefault(400);
+	フォント固有の設定を引き継げるmixin
+	引数はfont-weight
+================ */
+@mixin fontDefault($weight: '400') {
+	font-family: 'Noto Sans JP', serif;
+	font-optical-sizing: auto;
+	font-weight: $weight;
+	font-style: normal;
+}
+@mixin fontEn($weight: '400') {
+	font-family: 'Tomorrow', serif;
+	font-weight: $weight;
+	font-style: normal;
+}

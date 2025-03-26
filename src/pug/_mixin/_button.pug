@@ -1,0 +1,11 @@
+//- button mixin
+//- element => a(href) or button(type)
+//- attributes => href
+//- size => xs or  sm or md or lg
+//- color => primary(bg-blue) or secondary(bg-white)
+//- text => label
+mixin button(element, color, text)
+	if element == 'a'
+		a(class=`c-button -${color}`)&attributes(attributes)!= text
+	else
+		button(class=`c-button -${color}` type='submit')&attributes(attributes)!= text

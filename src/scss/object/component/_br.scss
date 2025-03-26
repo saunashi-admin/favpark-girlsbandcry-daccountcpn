@@ -1,0 +1,15 @@
+@use '../../variables' as var;
+@use '../../modules' as mod;
+.c-br{
+	&.-sp{
+		@include mod.mq('lg'){
+			display: none;
+		}
+	}
+	&.-pc{
+		display: none;
+		@include mod.mq('lg'){
+			display: inline-block;
+		}
+	}
+}

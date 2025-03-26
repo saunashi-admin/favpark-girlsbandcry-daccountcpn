@@ -1,0 +1,62 @@
+@use '../../variables' as var;
+@use '../../modules' as mod;
+.p-request{
+	&__content{
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		padding: 55px 0;
+		min-height: 100vh;
+		@include mod.mq('lg'){
+			align-items: center;
+		}
+		.c-btn{
+			padding-left: 14px;
+			@include mod.mq('lg'){
+				margin: 0;
+			}
+		}
+	}
+	&__more{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-direction: column;
+		gap: 13px;
+		@include mod.mq('lg'){
+			flex-direction: row;
+			justify-content: center;
+			gap: 20px;
+		}
+	}
+	&__icon{
+		max-width: 74px;
+		margin: 0 auto 15px;
+		@include mod.mq('lg'){
+			max-width: 100px;
+		}
+	}
+	&__heading{
+		margin-bottom: 30px;
+		font-size: 24px;
+		font-weight: 900;
+		letter-spacing: 0.05em;
+		text-align: center;
+		@include mod.mq('lg'){
+			margin-bottom: 40px;
+			font-size: 32px;
+		}
+	}
+	&__paragraph{
+		margin-bottom: 30px;
+		font-size: 16px;
+		font-weight: 900;
+		letter-spacing: 0.05em;
+		text-align: center;
+		@include mod.mq('lg'){
+			margin-bottom: 40px;
+			font-size: 20px;
+		}
+	}
+}

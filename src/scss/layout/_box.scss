@@ -1,0 +1,35 @@
+@use '../variables' as var;
+@use '../modules' as mod;
+.l-box{
+	background: var.$color_bg_01;
+	border-radius: 15px;
+	width: 100%;
+	margin: 0 auto;
+	max-width: calc(100% - (17px * 2));
+	@include mod.mq('md'){
+		max-width: mod.pxtovw(1000, 1280);
+	}
+	@include mod.mq('lg'){
+		max-width: 1000px;
+	}
+	&__inner{
+		padding: 60px 30px 35px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-direction: column;
+		height: 100%;
+		margin-bottom: 50px;
+		@include mod.mq('lg'){
+			padding: 80px 0 55px;
+			margin-bottom: 0;
+		}
+	}
+	&__copyright{
+		margin-top: auto;
+		font-weight: 500;
+		@include mod.mq('lg'){
+			margin-top: 60px;
+		}
+	}
+}

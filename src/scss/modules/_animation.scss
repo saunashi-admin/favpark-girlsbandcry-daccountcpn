@@ -1,0 +1,156 @@
+@use '../variables' as var;
+[data-fade]{
+	opacity: 0;
+	transform: translateY(50px);
+	transition: transform .5s ease, opacity .25s ease;
+	&.is-show {
+		animation-name: fadeUpAnime;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+	}
+}
+[data-scroll='content']{
+	overflow: hidden;
+	opacity: 0;
+	> *{
+		transform: translate3d(0, 130%, 0);
+		transform-origin: left bottom;
+		transition: opacity .5s cubic-bezier(0.22,1,0.36,1) .2s,transform 1.4s cubic-bezier(0.22,1,0.36,1) .2s;
+	}
+	&.is-show{
+		opacity: 1;
+		> * {
+			transform: translate(0);
+		}
+	}
+}
+
+[data-scroll='scaleContent']{
+	transform-origin: center top;
+	transform: scaleX(0.9);
+	transition: opacity 0.6s cubic-bezier(0.45, 0.25, 0.15, 1),transform 0.8s cubic-bezier(0.45, 0.25, 0.15, 1);
+	&.is-show{
+		transform: scale(1);
+	}
+}
+@keyframes fadeUpAnime{
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes extendLineXAnime{
+	from{
+		width: 100%;
+	}
+	to{
+		width: 0%;
+	}
+}
+@keyframes fadeExtendLineXAnime{
+	0%{
+		width: 100%;
+	}
+	50%{
+		width: 100%;
+	}
+	50.1%{
+		width: 100%;
+	}
+	100%{
+		width: 0%;
+	}
+}
+@keyframes extendLineHistory{
+	0%{
+		transform: scaleX(1);
+		height: 0;
+	}
+	50%{
+		height: 100%;
+	}
+	50.1%{
+		height: 100%;
+	}
+	100%{
+		height: 100%;
+	}
+}
+@keyframes arrowMoveAnime{
+	0%{
+		transform: translateX(0);
+	}
+	50%{
+		transform: translateX(100%);
+	}
+	50.1%{
+		transform: translateX(100%);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+@keyframes scaleImg{
+	0%{
+		transform: scale(1.0);
+	}
+	100%{
+		transform: scale(1.05);
+	}
+}
+@keyframes slideUpAnime{
+	0%{
+		transform: translate3d(0, 10rem, 0);
+		opacity: 1;
+	}
+	100%{
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+@keyframes fadeAnime{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fuwaAnime {
+	0% {
+		transform: translate(0, 0)
+	}
+	25% {
+		transform: translate(-5px, 5px)
+	}
+	50% {
+		transform: translate(5px, 0)
+	}
+	75% {
+		transform: translate(0, 5px)
+	}
+	100% {
+		transform: translate(0, 0)
+	}
+}
+@keyframes uneAnime {
+	0% {
+		border-radius: 60% 50% 70% 80% / 50% 60% 50% 70%;
+	}
+	25% {
+		border-radius: 70% 60% 60% 90% / 70% 80% 40% 90%;
+	}
+	50% {
+		border-radius: 60% 40% 70% 60% / 40% 60% 50% 60%;
+	}
+	75% {
+		border-radius: 90% 60% 40% 70% / 70% 50% 80% 40%;
+	}
+	100% {
+		border-radius: 60% 50% 70% 80% / 50% 60% 50% 70%;
+	}
+}

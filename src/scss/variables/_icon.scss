@@ -1,0 +1,18 @@
+@use './color' as var;
+@use "sass:string";
+
+// ================
+//	@include var.arrowIcon(var.$color_primary, 14px, 14px);
+//	右下向きの矢印アイコン
+//	rotateで回転させることで上下左向きにも変更可能
+//	$baseColorで色を変更可能
+//================
+@mixin arrowIcon($baseColor: var.$color_primary, $with: 14px, $height: 14px) {
+	display: block;
+	width: $with;
+	height: $height;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path id="icon_arrow" data-name="icon_arrow" d="M2.8,0V2.8H9.24L0,12.039,1.961,14,11.2,4.76V11.2H14V0Z" transform="translate(14 0) rotate(90)" fill="%23#{string.slice(#{$baseColor}, -6)}"/></svg>');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}

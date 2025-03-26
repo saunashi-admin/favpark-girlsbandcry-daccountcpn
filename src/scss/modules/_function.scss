@@ -1,0 +1,78 @@
+@use '../variables' as var;
+@use 'sass:map';
+@use 'sass:math';
+
+// メディアクエリ
+@mixin mq($breakpoint: xs) {
+	@media #{map.get(var.$breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// タイトルだけ。本文は絶対値でいい
+@mixin perfect_vw($max-width, $min-width, $max-size, $min-size, $property) {
+	$a: ($max-size - $min-size) / ($max-width - $min-width);
+	$b: ($a * 100) + vw;
+	$c: ($min-size - $a * $min-width) + px;
+	#{$property}: $min-size + px;
+	@media (min-width: $min-width  + px) {
+		#{$property}: calc(#{$b} + #{$c});
+	}
+	@media (min-width: $max-width  + px) {
+		#{$property}: $max-size + px;
+	}
+}
+/*
+@include perfect_vw(1200, 320, 60, 14, font-size);
+*/
+
+@function vw_pc($value) {
+	@return $value / 375 * 100vw;
+}
+@function vw_tab($value) {
+	@return $value / 768 * 100vw;
+}
+@function vw_sp($value) {
+	@return $value / 1280 * 100vw;
+}
+@function pxtovw($num, $width: $viewport) {
+	@return calc(1vw * $num / $width * 100);
+}
+
+@function pxtop($num, $width: $viewport) {
+	@return calc($num / $width * 100%);
+}
+
+// ビデオなどの比率を保つ
+@mixin aspectRatio($paddingTop) {
+	padding-top: ($paddingTop) * 1%;
+	position: relative;
+	& > *:first-child {
+		height: 100% !important;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100% !important;
+	}
+}
+
+// line-heightの上下カット
+@mixin lineHeightCrop($line-height) {
+	line-height: #{$line-height};
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		height: 0;
+		width: 0;
+	}
+	&::before {
+		margin-top: calc((1 - #{$line-height}) * 0.5em);
+	}
+	&::after {
+		margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+	}
+}
+/*
+  @include lineHeightCrop(1.75);
+*/

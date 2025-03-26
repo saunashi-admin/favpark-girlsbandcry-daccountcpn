@@ -1,0 +1,16 @@
+mixin step(levels)
+	ul.c-step__list
+		each level, index in levels
+			- var count = index + 1
+			- var text = level[0]
+			- var position = level[1]
+
+			li.c-step__item
+				span.c-step__link(class=`${position}`)
+					span.c-step__text !{text}
+
+//- nav
+//-   +step([
+//-     ['Home', '/', ''],
+//-     ['About', '/about/', '-current']
+//-   ])

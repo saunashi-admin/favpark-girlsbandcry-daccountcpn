@@ -1,0 +1,29 @@
+@use '../variables' as var;
+@use '../modules' as mod;
+.l-container{
+	width: 100%;
+	margin: 0 auto;
+	max-width: calc(100% - (20px * 2));
+	@include mod.mq('md'){
+		max-width: mod.pxtovw(900, 1280);
+	}
+	@include mod.mq('lg'){
+		max-width: 900px;
+	}
+	&.-lg{
+		@include mod.mq('md'){
+			max-width: mod.pxtovw(920, 1280);
+		}
+		@include mod.mq('lg'){
+			max-width: 920px;
+		}
+	}
+	&.-xl{
+		@include mod.mq('md'){
+			max-width: mod.pxtovw(940, 1280);
+		}
+		@include mod.mq('lg'){
+			max-width: 940px;
+		}
+	}
+}

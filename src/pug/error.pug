@@ -1,0 +1,28 @@
+extends ./_layout/_pages.pug
+block vars
+	include ./_config/_config.pug
+	- var key = 'top'
+	- var page = pages[key]
+	- var bodyClass = 'p-request'
+
+block contents
+	.p-request__content
+		.l-box
+			.l-box__inner
+				.p-request__icon
+					img(src=imgPath+'common/icon_error.svg' alt='error')
+				h1.p-request__heading
+					| エントリーに失敗
+					br.c-br.-sp
+					| しました。
+				.p-request__paragraph
+					| お手数おかけしますが、
+					br.c-br.-sp
+					| もう一度やり直してください。
+				.p-request__more
+					a.c-btn.-tertiary(href='/favpark/girlsbandcry-exhibition')
+						span.c-btn__text
+							| サイトへ戻る
+						span.c-btn__icon.-arrow.-external
+				.l-box__copyright
+					| ©NTT ドコモ

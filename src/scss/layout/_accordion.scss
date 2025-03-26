@@ -1,0 +1,168 @@
+@use '../variables' as var;
+@use '../modules' as mod;
+.l-accordion{
+	background: var.$color_text;
+	&__heading{
+		padding: 16px 20px;
+		padding-right: calc(28px + 10px + 5px + 2px);
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+		@include mod.mq('lg'){
+			padding: 25px 30px;
+			padding-right: calc(40px + 27px + 5px);
+		}
+		&Text{
+			color: var.$color_bg_01;
+			font-size: 16px;
+			line-height: calc(30 / 16);
+			letter-spacing: 0.05em;
+			font-weight: 900;
+			@include mod.mq('lg'){
+				font-size: 20px;
+			}
+		}
+		&.is-open{
+			.l-accordion__icon{
+				&:after{
+					rotate: 90deg;
+				}
+			}
+		}
+	}
+	&__icon{
+		background: transparent url(../img/home/icon_accordion.svg) no-repeat center;
+		background-size: contain;
+		border-radius: 50%;
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		@include mod.mq('lg'){
+			width: 40px;
+			height: 40px;
+		}
+		&:before,
+		&:after{
+			background: var.$color_text;
+			content: '';
+			position: absolute;
+		}
+		&:before{
+			width: 10px;
+			height: 2px;
+			top: 13px;
+			left: 9px;
+			@include mod.mq('lg'){
+				width: 15px;
+				height: 3px;
+				top: 18px;
+				left: 12px;
+			}
+		}
+		&:after{
+			transition: all .25s ease;
+			width: 2px;
+			height: 10px;
+			transform-origin: center;
+			left: 13px;
+			top: 9px;
+			@include mod.mq('lg'){
+				width: 3px;
+				height: 15px;
+				top: 12px;
+				left: 18px;
+			}
+		}
+	}
+	&__content{
+		border-top: 1px solid var.$color_bg_01;
+		padding: 25px 16px 35px;
+		display: none;
+		color: var.$color_bg_01;
+		@include mod.mq('lg'){
+			padding: 35px 0 45px;
+		}
+	}
+	&Content{
+		&__list{
+			@include mod.mq('lg'){
+				max-width: 800px;
+				margin: 0 auto;
+			}
+			&+.l-accordionContent__paragraph{
+				margin-top: 15px;
+				&.-heading{
+					margin-top: 30px;
+				}
+				&+.-heading{
+					margin-top: 30px;
+				}
+			}
+		}
+		&__item{
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			font-size: 15px;
+			font-weight: 500;
+			line-height: calc(28 / 15);
+			word-break: break-all;
+			@include mod.mq('lg'){
+				font-size: 16px;
+				line-height: calc(30 / 16);
+			}
+			&:before{
+				content: '・';
+				flex-shrink: 0;
+			}
+			&.-question{
+				&:before{
+					content: 'Q.';
+					flex-shrink: 0;
+				}
+			}
+			&.-answer{
+				margin-top: 5px;
+				&:before{
+					content: 'A.';
+					flex-shrink: 0;
+				}
+			}
+		}
+		&__paragraph{
+			font-size: 15px;
+			font-weight: 500;
+			line-height: calc(28 / 15);
+			@include mod.mq('lg'){
+				max-width: 800px;
+				margin: 0 auto;
+				font-size: 16px;
+				line-height: calc(30 / 16);
+			}
+			&.-heading{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 5px;
+				font-weight: 700;
+				&:before{
+					background: var.$color_bg_01;
+					content: '';
+					width: 6px;
+					height: 6px;
+					flex-shrink: 0;
+				}
+			}
+			&.-bold{
+				font-weight: 700;
+			}
+		}
+		&__block{
+			margin-top: 30px;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+@use '../variables' as var;
+@use '../modules' as mod;
+.l-ticket{
+	--color-heading: #121212;
+	--color-bg: #FFFFFF;
+	--color-bg-rgb: 255, 255, 255;
+	&.-blue{
+		--color-heading: #6DCCDD;
+		--color-bg: #6ECCDE;
+		--color-bg-rgb: 110, 204, 222;
+	}
+	&.-green{
+		--color-heading: #54C323;
+		--color-bg: #53C223;
+		--color-bg-rgb: 94, 196, 49;
+	}
+	&.-pink{
+		--color-heading: #FF7CB2;
+		--color-bg: #FF7CB3;
+		--color-bg-rgb: 255, 124, 179;
+	}
+	&.-yellow{
+		--color-heading: #FFF24B;
+		--color-bg: #FFF34A;
+		--color-bg-rgb: 255, 243, 74;
+	}
+	&__box{
+		margin-bottom: 15px;
+		@include mod.mq('lg'){
+			margin-bottom: 20px;
+		}
+	}
+	&__title{
+		background: var(--color-heading);
+		display: flex;
+		align-items: stretch;
+		justify-content: flex-start;
+		gap: 10px;
+		padding: 15px 15px 15px 14px;
+		font-size: 18px;
+		font-weight: 900;
+		line-height: calc(24 / 18);
+		@include mod.mq('lg'){
+			padding: 16px 22px;
+			font-size: 24px;
+		}
+		&:before{
+			background: var.$color_text;
+			border-radius: 2px;
+			content: '';
+			width: 4px;
+			flex-shrink: 0;
+		}
+	}
+	&__detail{
+		background: rgba(var(--color-bg-rgb), 0.2);
+		border: 4px solid var(--color-heading);
+		border-top: none;
+		padding: 30px 20px 45px;
+		@include mod.mq('lg'){
+			padding: 40px 0 50px;
+		}
+	}
+	&Detail{
+		&__inner{
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			flex-direction: column;
+			gap: 20px;
+			@include mod.mq('lg'){
+				justify-content: flex-end;
+				flex-direction: row-reverse;
+				max-width: 780px;
+				margin: 0 auto;
+				gap: 60px;
+			}
+			.l-ticketDetail__list{
+				@include mod.mq('lg'){
+					max-width: none;
+					margin: 0;
+				}
+			}
+			&Img{
+				@include mod.mq('lg'){
+					max-width: 320px;
+				}
+			}
+		}
+		&__list{
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 15px;
+			@include mod.mq('lg'){
+				max-width: 780px;
+				margin: 0 auto;
+				gap: 20px;
+			}
+			&Item{
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 10px;
+			}
+			&Title{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 10px;
+				font-weight: 900;
+				font-size: 16px;
+				&:before{
+					background: var.$color_text;
+					content: '';
+					width: 6px;
+					height: 6px;
+					margin-top: 3px;
+				}
+			}
+			&Paragraph{
+				font-size: 16px;
+				font-weight: 500;
+				line-height: calc(30 / 16);
+				&+.l-ticketDetail__listParagraph{
+					margin-top: 15px;
+				}
+			}
+		}
+		&__btn{
+			margin-top: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 10px;
+			@include mod.mq('lg'){
+				flex-direction: row;
+				gap: 20px;
+			}
+			.c-btn{
+				margin: 0;
+			}
+		}
+	}
+}

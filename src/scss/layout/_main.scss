@@ -1,0 +1,8 @@
+@use "../variables" as var;
+@use "../modules" as mod;
+
+.l-main {
+	background: var.$color_primary;
+	max-width: 100vw;
+	overflow-x: hidden;
+}
