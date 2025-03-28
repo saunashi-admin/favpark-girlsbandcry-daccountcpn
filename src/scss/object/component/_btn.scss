@@ -12,7 +12,7 @@
 	margin: 0 auto;
 	@include mod.mq('lg'){
 		max-width: 360px;
-		height: 80px;
+		// height: 80px;
 	}
 	&:before{
 		background: var.$color_text;

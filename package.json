@@ -1,7 +1,7 @@
 {
-	"name": "favpark-girlsbandcry",
+	"name": "favpark-girlsbandcry-daccountcpn",
 	"version": "1.1.0",
-	"description": "favpark-girlsbandcry",
+	"description": "favpark-girlsbandcry-daccountcpn",
 	"main": "index.js",
 	"browserify": {
 		"transform": [
@@ -32,15 +32,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/saunashi-admin/favpark-girlsbandcry.git"
+		"url": "git+https://github.com/saunashi-admin/favpark-girlsbandcry-daccountcpn.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/saunashi-admin/favpark-girlsbandcry/issues"
+		"url": "https://github.com/saunashi-admin/favpark-girlsbandcry-daccountcpn/issues"
 	},
-	"homepage": "https://github.com/saunashi-admin/favpark-girlsbandcry#readme",
+	"homepage": "https://github.com/saunashi-admin/favpark-girlsbandcry-daccountcpn#readme",
 	"devDependencies": {
 		"@babel/core": "^7.16.0",
 		"@babel/polyfill": "^7.12.1",

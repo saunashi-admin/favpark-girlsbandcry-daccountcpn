@@ -1,4 +1,4 @@
-# favpark-girlsbandcry
+# favpark-girlsbandcry-daccountcpn
 `dist` 以下は管理しません。  
 ~~動作確認済環境 : v15.8.0~~  
 node: v18.18.2  
