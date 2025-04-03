@@ -6,27 +6,28 @@ block vars
 	- var bodyClass = 'p-dl'
 
 block contents
-	header.p-dl__header
-		h1.p-dl__heading
-			img(src=imgPath+'common/logo.svg', alt='ガールズバンドクライ展', width='344', height='46', fetchpriority='high').p-dl__headingImg
-		p.p-dl__place
-			img(src=imgPath+'home/text_01.svg', alt='dアカウントチェックインキャンペーン（東京会場）', width='332', height='41', fetchpriority='high').p-dl__placeImg
+	.p-dl__main
+		header.p-dl__header
+			h1.p-dl__heading
+				img(src=imgPath+'common/logo.svg', alt='ガールズバンドクライ展', width='344', height='46', fetchpriority='high').p-dl__headingImg
+			p.p-dl__place
+				img(src=imgPath+'home/text_01.svg', alt='dアカウントチェックインキャンペーン（東京会場）', width='332', height='41', fetchpriority='high').p-dl__placeImg
 
-	.p-dl__wrapper#js-dl
-		.p-dl__loading#js-dlLoading
-			.p-dlLoading__content
-				.p-dlLoading__circle
-				.p-dlLoading__circle
-				.p-dlLoading__circle
-				.p-dlLoading__shadow
-				.p-dlLoading__shadow
-				.p-dlLoading__shadow
-		.p-dl__content#js-dlContent
-			.p-dlContent__img
-				img#js-dlImg(src="", alt="")
-			p.p-dlContent__title#js-dlTitle
+		.p-dl__wrapper#js-dl
+			.p-dl__loading#js-dlLoading
+				.p-dlLoading__content
+					.p-dlLoading__circle
+					.p-dlLoading__circle
+					.p-dlLoading__circle
+					.p-dlLoading__shadow
+					.p-dlLoading__shadow
+					.p-dlLoading__shadow
+			.p-dl__content#js-dlContent
+				.p-dlContent__img
+					img#js-dlImg(src="", alt="")
+				p.p-dlContent__title#js-dlTitle
 
-	p.p-dl__copyright
-		img(src=imgPath+'common/text_copyright.svg', alt='東映アニメーション', width='120', height='12', loading='lazy', fetchpriority='low').p-homeCopyright__img
+		p.p-dl__copyright
+			img(src=imgPath+'common/text_copyright.svg', alt='東映アニメーション', width='120', height='12', loading='lazy', fetchpriority='low').p-homeCopyright__img
 
 

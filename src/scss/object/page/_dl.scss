@@ -2,29 +2,31 @@
 @use '../../modules' as mod;
 
 .p-dl{
-	position: relative;
-	overflow: hidden;
-	&:before{
-		background: transparent url(../img/home/bg_01.svg) no-repeat center;
-		background-size: contain;
-		content: '';
-		width: 702px;
-		height: 428px;
-		position: absolute;
-		top: -195px;
-		left: calc(50% - 15px);
-		transform: translateX(-50%);
-	}
-	&:after{
-		background: transparent url(../img/home/bg_02.svg) no-repeat center;
-		background-size: contain;
-		content: '';
-		width: 597px;
-		height: 458px;
-		position: absolute;
-		bottom: -305px;
-		left: calc(50% + 60px);
-		transform: translateX(-50%);
+	&__main{
+		position: relative;
+		overflow: hidden;
+		&:before{
+			background: transparent url(../img/home/bg_01.svg) no-repeat center;
+			background-size: contain;
+			content: '';
+			width: 702px;
+			height: 428px;
+			position: absolute;
+			top: -195px;
+			left: calc(50% - 15px);
+			transform: translateX(-50%);
+		}
+		&:after{
+			background: transparent url(../img/home/bg_02.svg) no-repeat center;
+			background-size: contain;
+			content: '';
+			width: 597px;
+			height: 458px;
+			position: absolute;
+			bottom: -305px;
+			left: calc(50% + 60px);
+			transform: translateX(-50%);
+		}
 	}
 }
 

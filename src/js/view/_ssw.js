@@ -53,24 +53,24 @@ if($('#js-dl').length){
 		setTimeout(() => {
 			const images = [
 				{
-					imgSrc: './assets/img/dl/img_01.png',
-					imgName: "特典イラストA"
+					imgSrc: './assets/img/dl/n6JHtGVN.png',
+					imgName: "仁菜"
 				},
 				{
-					imgSrc: './assets/img/dl/img_02.png',
-					imgName: "特典イラストB"
+					imgSrc: './assets/img/dl/Gh6QauYe.png',
+					imgName: "桃香"
 				},
 				{
-					imgSrc: './assets/img/dl/img_03.png',
-					imgName: "特典イラストC"
+					imgSrc: './assets/img/dl/Hk6j5SqW.png',
+					imgName: "すばる"
 				},
 				{
-					imgSrc: './assets/img/dl/img_04.png',
-					imgName: "特典イラストD"
+					imgSrc: './assets/img/dl/V2iJAqub.png',
+					imgName: "智"
 				},
 				{
-					imgSrc: './assets/img/dl/img_05.png',
-					imgName: "特典イラストE"
+					imgSrc: './assets/img/dl/i2BtnVqZ.png',
+					imgName: "ルパ"
 				},
 			];
 			const setImageAttributes = (imgSrc, imgName) => {
